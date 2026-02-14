@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<title>A Question From My Heart ❤️</title>
+
+<style>
+
+/* WARM ROMANTIC SKY */
+
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:'Poppins',sans-serif;
+
+background:linear-gradient(-45deg,
+#ff9a9e,
+#fecfef,
+#ffecd2,
+#fcb69f,
+#ff758c,
+#ff7eb3,
+#fa709a,
+#fee140,
+#ffd89b);
+
+background-size:600% 600%;
+animation:sky 20s ease infinite;
+}
+
+@keyframes sky{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* ROMANTIC GLASS CARD */
+
+.card{
+backdrop-filter:blur(25px);
+background:rgba(255,255,255,.25);
+padding:60px 50px;
+border-radius:35px;
+width:460px;
+text-align:center;
+color:#fff;
+box-shadow:0 35px 100px rgba(255,100,130,.45),
+           inset 0 0 40px rgba(255,255,255,.15);
+animation:fade 1.5s ease;
+border:1px solid rgba(255,255,255,.3);
+}
+
+@keyframes fade{
+from{opacity:0; transform:scale(.75) translateY(30px);}
+to{opacity:1; transform:scale(1) translateY(0);}
+}
+
+/* TYPEWRITER */
+
+.type{
+border-right:3px solid rgba(255,255,255,.8);
+white-space:nowrap;
+overflow:hidden;
+width:0;
+animation:typing 4.5s steps(50,end) forwards, blink .7s infinite;
+font-size:18px;
+margin:25px 0;
+}
+
+@keyframes typing{
+to{width:100%;}
+}
+
+@keyframes blink{
+50%{border-color:transparent;}
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:68px;
+}
+
+h2{
+font-size:28px;
+margin:35px 0 25px 0;
+}
+
+/* BUTTONS */
+
+button{
+border:none;
+padding:16px 38px;
+margin:15px 8px;
+font-size:19px;
+border-radius:45px;
+cursor:pointer;
+transition:all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+font-weight:600;
+}
+
+#yes{
+background:linear-gradient(135deg, #ff6b9d 0%, #ff4d6d 50%, #c9184a 100%);
+color:white;
+box-shadow:0 0 40px rgba(255,77,109,.6);
+position:relative;
+overflow:hidden;
+}
+
+#yes::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg, transparent, rgba(255,255,255,.3), transparent);
+transition:left .5s;
+}
+
+#yes:hover::before{
+left:100%;
+}
+
+#yes:hover{
+transform:scale(1.2) translateY(-3px);
+box-shadow:0 0 55px rgba(255,77,109,.8);
+}
+
+#no{
+position:absolute;
+background:linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+color:#666;
+box-shadow:0 5px 20px rgba(0,0,0,.2);
+}
+
+/* FLOAT QUOTES - FIXED */
+
+.floatMsg{
+position:fixed;
+background:linear-gradient(135deg, #fff 0%, #fffbf5 100%);
+padding:20px 28px;
+border-radius:22px;
+box-shadow:0 15px 45px rgba(255,100,130,.4),
+           0 0 20px rgba(255,150,180,.3);
+max-width:300px;
+animation:romanticFloat 2.5s ease forwards;
+color:#c9184a;
+font-size:16px;
+font-weight:500;
+line-height:1.6;
+z-index:1000;
+border:2px solid rgba(255,150,180,.3);
+}
+
+@keyframes romanticFloat{
+0%{opacity:0; transform:translateY(25px) scale(.9);}
+10%{opacity:1; transform:translateY(0) scale(1);}
+90%{opacity:1; transform:translateY(0) scale(1);}
+100%{opacity:0; transform:translateY(-30px) scale(.95);}
+}
+
+/* POPUP */
+
+.popup{
+position:fixed;
+inset:0;
+background:rgba(255,100,130,.25);
+backdrop-filter:blur(12px);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.box{
+background:linear-gradient(135deg, #fff 0%, #fffbf5 100%);
+padding:50px 45px;
+border-radius:30px;
+width:420px;
+text-align:center;
+box-shadow:0 25px 80px rgba(255,100,130,.4);
+color:#c9184a;
+max-height:75vh;
+overflow-y:auto;
+scrollbar-width:none;
+border:2px solid rgba(255,150,180,.2);
+animation:boxZoom .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes boxZoom{
+from{transform:scale(.7) rotate(-5deg);}
+to{transform:scale(1) rotate(0deg);}
+}
+
+.box::-webkit-scrollbar{
+display:none;
+}
+
+.box h2{
+color:#c9184a;
+font-size:32px;
+margin-bottom:20px;
+}
+
+.box p{
+font-size:18px;
+line-height:1.8;
+margin:20px 0;
+color:#666;
+}
+
+.box button{
+background:linear-gradient(135deg, #ff6b9d 0%, #ff4d6d 100%);
+color:white;
+padding:15px 35px;
+font-size:17px;
+margin-top:20px;
+box-shadow:0 8px 25px rgba(255,77,109,.4);
+}
+
+.box button:hover{
+transform:scale(1.1);
+box-shadow:0 12px 35px rgba(255,77,109,.6);
+}
+
+/* SHAYARI */
+
+.shayariText{
+font-family:'Great Vibes',cursive;
+font-size:30px;
+line-height:1.9;
+padding:10px;
+color:#c9184a;
+}
+
+/* MUSIC */
+
+.music{
+position:absolute;
+top:25px;
+right:25px;
+background:linear-gradient(135deg, #fff 0%, #fffbf5 100%);
+padding:12px 22px;
+border-radius:35px;
+cursor:pointer;
+color:#c9184a;
+font-weight:600;
+box-shadow:0 8px 25px rgba(255,100,130,.3);
+border:2px solid rgba(255,150,180,.2);
+transition:all .3s ease;
+}
+
+.music:hover{
+transform:scale(1.1);
+box-shadow:0 12px 35px rgba(255,100,130,.5);
+}
+
+/* HEART */
+
+.bigHeart{
+font-size:150px;
+animation:beat .9s ease-in-out infinite;
+filter:drop-shadow(0 0 30px rgba(255,100,130,.5));
+}
+
+@keyframes beat{
+0%, 100%{transform:scale(1);}
+50%{transform:scale(1.15);}
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="music" onclick="playMusic()">🎵 Play Music</button>
+
+<audio id="music" loop>
+<source src="music.mp3">
+</audio>
+
+<div class="card">
+
+<h1>Hey Sweetie ❤️</h1>
+
+<p class="type">
+Every path I walked somehow led me to you…
+</p>
+
+<h2>Will You Be My Valentine?</h2>
+
+<button id="yes">YES 😍</button>
+<button id="no">NO 🙈</button>
+
+</div>
+
+<div class="popup" id="popup">
+<div class="box" id="box"></div>
+</div>
+
+<script>
+
+/* MUSIC */
+
+function playMusic(){
+let m=document.getElementById("music");
+m.volume=0;
+m.play();
+
+let fade=setInterval(()=>{
+if(m.volume<0.9) m.volume+=0.03;
+else clearInterval(fade);
+},200);
+}
+
+/* FIXED RUNAWAY NO BUTTON WITH WORKING POPUP MESSAGES */
+
+const no=document.getElementById("no");
+
+let lastQuoteTime=0;
+let quoteVisible=false;
+let gameActive=true; // NEW: flag to stop the no button game
+
+document.addEventListener("mousemove",(e)=>{
+
+// Stop if game is no longer active
+if(!gameActive) return;
+
+const rect=no.getBoundingClientRect();
+
+const dist=Math.hypot(
+e.clientX-(rect.left+rect.width/2),
+e.clientY-(rect.top+rect.height/2)
+);
+
+const now=Date.now();
+
+// Only show quote if: close enough, enough time passed, and no quote currently visible
+if(dist<140 && now-lastQuoteTime>1200 && !quoteVisible){
+// Move the button first
+no.style.left=Math.random()*75+"vw";
+no.style.top=Math.random()*75+"vh";
+
+// Then show the quote
+showQuote(e.clientX, e.clientY);
+lastQuoteTime=now;
+}
+});
+
+const quotes=[
+"Wait… what if this moment becomes our favorite story to tell? 💕",
+"Some feelings are worth taking a chance on… like right now ❤️",
+"You walked into my life and suddenly everything made sense 🌹",
+"I promise to make you smile every single day… just say yes 😊",
+"What if I told you… you're the best thing that's ever happened to me? 💖",
+"Before you say no… imagine all the beautiful moments we haven't created yet ✨",
+"My heart beats a little faster every time I think of you 💓",
+"You're not just someone special… you're my favorite person 🥰",
+"Some people search their whole life for what I found in you 💝",
+"Every love story is beautiful… but ours could be extraordinary 🌟",
+"You might want to rethink that… my heart is involved ❤️",
+"Say yes… and let's make memories together ✨"
+];
+
+function showQuote(x,y){
+
+if(quoteVisible) return;
+quoteVisible=true;
+
+const msg=document.createElement("div");
+msg.className="floatMsg";
+msg.innerText=quotes[Math.floor(Math.random()*quotes.length)];
+
+// Better positioning logic to keep message on screen
+let left=x+25;
+let top=y-25;
+
+// Keep message within viewport
+if(left>window.innerWidth-320) left=window.innerWidth-330;
+if(left<10) left=10;
+if(top<10) top=10;
+if(top>window.innerHeight-120) top=window.innerHeight-130;
+
+msg.style.left=left+"px";
+msg.style.top=top+"px";
+
+document.body.appendChild(msg);
+
+setTimeout(()=>{
+msg.remove();
+quoteVisible=false;
+},2500); // Changed from 4000 to 2500 (2.5 seconds)
+}
+
+/* YES CLICK */
+
+const popup=document.getElementById("popup");
+const box=document.getElementById("box");
+
+document.getElementById("yes").onclick=()=>{
+
+// STOP THE NO BUTTON GAME
+gameActive=false;
+no.style.display='none'; // Hide the no button completely
+
+popup.style.display="flex";
+
+/* HEART RAIN CELEBRATION */
+for(let i=0;i<60;i++){
+setTimeout(()=>{
+let h=document.createElement("div");
+h.style.position="fixed";
+h.style.fontSize=(Math.random()*25+25)+"px";
+h.innerHTML=['💖','💕','❤️','💝','💗','💓'][Math.floor(Math.random()*6)];
+h.style.left=Math.random()*100+"vw";
+h.style.top="-50px";
+h.style.animation="fall "+(Math.random()*3+3)+"s linear forwards";
+h.style.zIndex="999";
+h.style.pointerEvents="none";
+h.style.filter="drop-shadow(0 0 8px rgba(255,150,180,.5))";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},i*60);
+}
+
+box.innerHTML=`
+<h2>I Knew You'd Say Yes! ❤️</h2>
+<p>You just made me the happiest person in the entire universe! 🥰</p>
+<p>I promise to cherish every moment with you... 💕</p>
+<button onclick="shayari()">Continue to Something Special ❤️</button>
+`;
+};
+
+/* SHAYARI WITH MANUAL NEXT */
+
+function shayari(){
+
+let poems=[
+
+`<div class="shayariText">
+Our late-night conversations became my favorite part of every day—sharing our lives, our secrets, our dreams.<br><br>
+The way we flirt, the spark between us, our own little coded language that only we understand.<br><br>
+And when you call me 'darling' in that sweet voice of yours, my heart races like it's the first time, every single time.<br><br>
+Your nicknames, your laughter, the chemistry we share—it's all made me realize something:<br><br>
+I'm not just addicted to you, I'm completely, hopelessly, beautifully lost in you. And I never want to be found.<br><br>
+I want every night to be ours, every conversation to lead us deeper, every 'darling' to be a promise. 💕
+</div>`,
+
+`<div class="shayariText">
+It was just supposed to be a call,<br>
+but the moment you giggled, the moment you spoke, I was gone.<br><br>
+You became my favorite conversation, my sweetest addiction, my whole world.<br><br>
+Now I want to spend forever making you laugh. ❤️
+</div>`,
+
+`<div class="shayariText">
+I would choose you…<br>
+in a hundred lifetimes,<br>
+in a hundred worlds,<br>
+in any version of reality,<br>
+I would find you and choose you. 💖
+</div>`
+];
+
+let i=0;
+
+function showPoem(){
+
+if(i>=poems.length){
+finalQuestion();
+return;
+}
+
+box.innerHTML=`
+${poems[i]}
+<br><br>
+<button onclick="nextPoem()">Next ➡️</button>
+`;
+}
+
+window.nextPoem=function(){
+i++;
+showPoem();
+}
+
+showPoem();
+}
+
+/* FINAL */
+
+function finalQuestion(){
+
+box.innerHTML=`
+<h2>Are You Convinced Now? 🥺💕</h2>
+<p>My heart is completely filled with love for you...</p>
+<button onclick="finalYes()">Yes, I'm Convinced! 💕</button>
+<button onclick="heartAnimation()">I Need More Convincing 😊</button>
+`;
+}
+
+function finalYes(){
+box.innerHTML=`
+<div class="bigHeart">❤️</div>
+<h2>You Made My Day! 🎉💕</h2>
+<p>I can't wait to create beautiful memories with you!</p>
+<p style="font-size:16px; margin-top:25px;">Let's chat more about our Valentine's plans...</p>
+<button onclick="insta()">💬 Reply on Instagram</button>
+`;
+}
+
+function heartAnimation(){
+box.innerHTML=`
+<div class="bigHeart">💖</div>
+<h2 style="margin-top:20px;">Your Love Fills My Heart Completely! 💕</h2>
+<p>Every beat of my heart whispers your name...</p>
+<p>Please say yes and make this the beginning of our forever 🥰</p>
+<button onclick="insta()">💬 Let's Talk on Instagram</button>
+`;
+}
+
+function insta(){
+window.location.href="https://www.instagram.com/chandradeep_05/?hl=en";
+}
+
+</script>
+</body>
+</html>
